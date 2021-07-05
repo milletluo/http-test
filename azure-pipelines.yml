@@ -40,3 +40,11 @@ steps:
     searchFolder: '$(System.DefaultWorkingDirectory)'
     runOnlyImpactedTests: false
     testRunTitle: 'testruntitle'
+- task: VSTest@2
+  inputs:
+    testSelector: 'testPlan'
+    testPlan: '4'
+    testSuite: '5'
+    testConfiguration: '1'
+    searchFolder: '$(System.DefaultWorkingDirectory)'
+    uiTests: true
